@@ -1,9 +1,7 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import { trpc } from "@/utils/trpc";
 
-const Home: NextPage = () => {
+export default function Home() {
+  const { data, isLoading } = trpc.useQuery(["hello"], {});
   return (
     <div className="h-screen w-screen flex flex-col justify-center items-center">
       <div className="text-2xl text-center">Which Pokemon is Rounder</div>
@@ -16,6 +14,4 @@ const Home: NextPage = () => {
       </div>
     </div>
   );
-};
-
-export default Home;
+}
