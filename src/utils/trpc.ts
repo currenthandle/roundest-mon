@@ -1,4 +1,3 @@
-// utils/trpc.ts
 import { createReactQueryHooks } from "@trpc/react";
 import type { AppRouter } from "@/backend/router";
 
