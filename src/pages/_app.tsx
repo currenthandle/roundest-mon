@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
+
 import { withTRPC } from "@trpc/next";
 import type { AppRouter } from "@/backend/router";
 

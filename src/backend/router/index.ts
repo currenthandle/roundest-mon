@@ -1,5 +1,5 @@
 import * as trpc from "@trpc/server";
-import * as trpcNext from "@trpc/server/adapters/next";
+
 import { z } from "zod";
 
 export const appRouter = trpc.router().query("hello", {
@@ -10,7 +10,7 @@ export const appRouter = trpc.router().query("hello", {
     .nullish(),
   resolve({ input }) {
     return {
-      greeting: `hellog ${input?.text ?? "world"}`,
+      greeting: `hello ${input?.text ?? "world"}`,
     };
   },
 });
